@@ -21,7 +21,7 @@ int main()
     while (guess!=answer);
     printf("****************\n");
    printf("Correct\n"); 
-   printf("Score:%d\n", guesses);
+   printf("Score:%d", guesses);
     printf("****************\n");
     
 }
