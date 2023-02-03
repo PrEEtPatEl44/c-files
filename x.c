@@ -1,49 +1,33 @@
-#include <stdio.h>
-#include <stdbool.h>  // Import the boolean header file 
-double add(double x, double y);
-double multiply(double x, double y);
-double sub(double x, double y);
-double div(double x, double y);
-int main(){
-  //double x,y;
-  char operator;
+#include<stdio.h>
+#include<stdbool.h>
+int isPrime();
+int main()
+{   int n=1;
+    int k=4;
+    for(int a=n; a<=k; a++)
+    {
+        (isPrime(a))? printf("%d\n", a):NULL;
+    }
+   
+  return 0;
+}
+
+
+
+int isPrime(int n)
+{
+      if(n<2)
+      {
+        return 0;   
+      }
+  for(int i=2; i<n; i++)
+  {   
+      if(n%i==0)
+      {
+        return 0;
+      }
+     // break;
+  }
   
-  printf("enter 1st number:");
-  scanf("%d",&x);
-  printf("enter 2nd number:");
-  scanf("%d",&y);
-  printf("Enter the operator: ");
-  scanf("%c\n", &operator);
-  if(operator = '+'){
-    add(x,y);
-    printf("Result:%d",add(x,y));
-  }
-  else if(operator = '*'){
-    multiply(x,y);
-    printf("Result:%d",multiply(x,y));
-  }
-  else if(operator = '-'){
-    sub(x,y);
-    printf("Result:%d",sub(x,y));
-  }
-  else if(operator = '/'){
-    div(x,y);
-    printf("Result:%lf",div(x,y));
-  }
-  else {
-    printf("enter a valid operator");
-  }
- return 0;
 }
-double add(double x, double y){
-  return x+y;
-}
-double multiply(double x, double y){
-  return x*y;
-}
-double sub(double x, double y){
-  return x-y;
-}
-double div(double x, double y){
-  return x/y;
-}
+   
