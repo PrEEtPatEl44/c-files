@@ -2,14 +2,8 @@
 int Fib(int n);
 int main(){
     int n=10;
-    for(int i=0; i<=n; i++){
-        if(i!=n){
-            continue;
-        }
-        else{
             printf("%d\n", Fib(i));
-        }
-    }
+    
 
     return 0;
 }
